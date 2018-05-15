@@ -46,6 +46,9 @@ class ViewController: UIViewController {
 		dist = dist/1000
 		
 		distance.text = "Distance: \(String(format:"%.2f",dist)) kilometers"
+        
+        let bear = loc1.bearingToPoint(point:loc2);
+        bearing.text = "Bearing: \(String(format:"%.2f", bear)) degrees"
     }
     
     @IBAction func clear(_ sender: Any) {
