@@ -41,6 +41,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clear(_ sender: Any) {
+        latP1.text = ""
+        longP1.text = ""
+        latP2.text = ""
+        longP2.text = ""
+        distance.text = "Distance:"
+        bearing.text = "Bearing:"
     }
     
 
