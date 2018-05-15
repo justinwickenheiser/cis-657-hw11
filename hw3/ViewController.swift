@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  hw3
 //
-//  Created by Justin Wickenheiser on 5/15/18.
-//  Copyright © 2018 Justin Wickenheiser. All rights reserved.
+//  Created by Justin Wickenheiser & Nathan Hull on 5/15/18.
+//  Copyright © 2018 Justin Wickenheiser & Nathan Hull. All rights reserved.
 //
 
 import UIKit
