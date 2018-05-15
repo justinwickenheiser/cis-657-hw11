@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ViewController: UIViewController {
 
@@ -38,6 +39,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func calculate(_ sender: Any) {
+		let loc1 = CLLocation(latitude: CLLocationDegrees((latP1.text! as NSString).doubleValue), longitude: CLLocationDegrees((longP1.text! as NSString).doubleValue))
+		let loc2 = CLLocation(latitude: CLLocationDegrees((latP2.text! as NSString).doubleValue), longitude: CLLocationDegrees((longP2.text! as NSString).doubleValue))
+		
+		var dist = loc1.distance(from:loc2)
+		dist = dist/1000
+		
+		distance.text = "Distance: \(String(format:"%.2f",dist)) kilometers"
     }
     
     @IBAction func clear(_ sender: Any) {
