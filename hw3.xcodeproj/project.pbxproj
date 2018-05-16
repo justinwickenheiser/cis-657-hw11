@@ -15,6 +15,7 @@
 		A2F8467E20AB9432006AB8D8 /* hw3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F8467D20AB9432006AB8D8 /* hw3Tests.swift */; };
 		A2F8468920AB9432006AB8D8 /* hw3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F8468820AB9432006AB8D8 /* hw3UITests.swift */; };
 		A2F8469720AB969A006AB8D8 /* DecimalMinusTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F8469620AB969A006AB8D8 /* DecimalMinusTextField.swift */; };
+		D846C08520ABA7BA0082F1B7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D846C08420ABA7BA0082F1B7 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		A2F8468820AB9432006AB8D8 /* hw3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hw3UITests.swift; sourceTree = "<group>"; };
 		A2F8468A20AB9432006AB8D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2F8469620AB969A006AB8D8 /* DecimalMinusTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalMinusTextField.swift; sourceTree = "<group>"; };
+		D846C08420ABA7BA0082F1B7 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				A2F8466820AB9431006AB8D8 /* AppDelegate.swift */,
 				A2F8466A20AB9431006AB8D8 /* ViewController.swift */,
 				A2F8466C20AB9432006AB8D8 /* Main.storyboard */,
+				D846C08420ABA7BA0082F1B7 /* SettingsViewController.swift */,
 				A2F8466F20AB9432006AB8D8 /* Assets.xcassets */,
 				A2F8467120AB9432006AB8D8 /* LaunchScreen.storyboard */,
 				A2F8467420AB9432006AB8D8 /* Info.plist */,
@@ -262,6 +265,7 @@
 				A2F8469720AB969A006AB8D8 /* DecimalMinusTextField.swift in Sources */,
 				A2F8466B20AB9431006AB8D8 /* ViewController.swift in Sources */,
 				A2F8466920AB9431006AB8D8 /* AppDelegate.swift in Sources */,
+				D846C08520ABA7BA0082F1B7 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
