@@ -128,14 +128,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kilometers" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pd7-CN-GzG">
-                                <rect key="frame" x="277" y="88" width="82" height="21"/>
+                                <rect key="frame" x="203" y="88" width="156" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.32324724740932642" green="0.32324724740932642" blue="0.32324724740932642" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Degrees" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onx-b7-K2p">
-                                <rect key="frame" x="294" y="117" width="65" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="D" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onx-b7-K2p">
+                                <rect key="frame" x="203" y="117" width="156" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.32324724739999999" green="0.32324724739999999" blue="0.32324724739999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -158,14 +158,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="degreeUnits" destination="onx-b7-K2p" id="kgB-tE-ios"/>
-                        <outlet property="distanceUnits" destination="Pd7-CN-GzG" id="Ja5-Og-Nsr"/>
-                        <outlet property="unitPicker" destination="U51-n6-fKU" id="vMR-kU-xEw"/>
+                        <outlet property="lblDegreeUnits" destination="onx-b7-K2p" id="5Ff-C4-q7q"/>
+                        <outlet property="lblDistanceUnits" destination="Pd7-CN-GzG" id="KQ1-NU-In9"/>
+                        <outlet property="unitPicker" destination="U51-n6-fKU" id="v1k-GR-gLF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MpY-Ow-0T6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="1440"/>
+            <point key="canvasLocation" x="1076" y="1439.7301349325339"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="45X-qo-31v">

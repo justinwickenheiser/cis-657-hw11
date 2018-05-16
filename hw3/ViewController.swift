@@ -17,7 +17,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var longP2: DecimalMinusTextField!
     @IBOutlet weak var distance: UILabel!
     @IBOutlet weak var bearing: UILabel!
-    
+	
+	var distanceUnits = "Kilometers"
+	var degreeUnits = "Degrees"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,10 +47,10 @@ class ViewController: UIViewController {
 		var dist = loc1.distance(from:loc2)
 		dist = dist/1000
 		
-		distance.text = "Distance: \(String(format:"%.2f",dist)) kilometers"
+		distance.text = "Distance: \(String(format:"%.2f",dist)) \(distanceUnits)"
         
         let bear = loc1.bearingToPoint(point:loc2);
-        bearing.text = "Bearing: \(String(format:"%.2f", bear)) degrees"
+        bearing.text = "Bearing: \(String(format:"%.2f", bear)) \(degreeUnits)"
     }
     
     @IBAction func clear(_ sender: Any) {
@@ -59,7 +61,14 @@ class ViewController: UIViewController {
         distance.text = "Distance:"
         bearing.text = "Bearing:"
     }
-    
-
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "SettingsSegue" {
+			if let destVC = segue.destination.childViewControllers[0] as? SettingsViewController {
+				destVC.distanceUnits = self.distanceUnits
+				destVC.degreeUnits = self.degreeUnits
+			}
+		}
+	}
 }
 

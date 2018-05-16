@@ -8,15 +8,45 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+	func numberOfComponents(in pickerView: UIPickerView) -> Int {
+		return 1
+	}
+	
+	func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+		return pickerData.count
+	}
+	
+	func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+		return pickerData[row]
+	}
+	
 
-	var delegate: SettingsViewControllerDelegate?
+//	var delegate: SettingsViewControllerDelegate?
+	var distanceUnits: String?
+	var degreeUnits: String?
+	
+	@IBOutlet weak var lblDistanceUnits: UILabel!
+	@IBOutlet weak var lblDegreeUnits: UILabel!
+	@IBOutlet weak var unitPicker: UIPickerView!
+	
+	var pickerData = [String]()
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+		lblDistanceUnits.text = self.distanceUnits!
+		lblDegreeUnits.text = self.degreeUnits!
+		
+		let detectEmptyTap = UITapGestureRecognizer(target: self, action: #selector(self.hidePicker))
+		self.view.addGestureRecognizer(detectEmptyTap)
+		let detectDistanceTap = UITapGestureRecognizer(target: lblDistanceUnits, action: #selector(self.setDistanceUnits))
+		self.view.addGestureRecognizer(detectDistanceTap)
+		let detectDegreeTap = UITapGestureRecognizer(target: lblDegreeUnits, action: #selector(self.setDegreeUnits))
+		self.view.addGestureRecognizer(detectDegreeTap)
+		
+		self.unitPicker.delegate = self
+		self.unitPicker.dataSource = self
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -29,11 +59,21 @@ class SettingsViewController: UIViewController {
 	@IBAction func saveSettings(_ sender: Any) {
 	}
 	
-
+	@objc func hidePicker() {
+		self.unitPicker.isHidden = true
+	}
 	
-	@IBOutlet weak var distanceUnits: UILabel!
-	@IBOutlet weak var degreeUnits: UILabel!
-	@IBOutlet weak var unitPicker: UIPickerView!
+	@objc func setDistanceUnits() {
+		self.unitPicker.isHidden = false
+		self.pickerData = ["Kilometers", "Miles"]
+		self.unitPicker.reloadAllComponents()
+	}
+	
+	@objc func setDegreeUnits() {
+		self.unitPicker.isHidden = false
+		self.pickerData = ["Degrees", "Mils"]
+		self.unitPicker.reloadAllComponents()
+	}
 	
     /*
     // MARK: - Navigation
@@ -46,7 +86,7 @@ class SettingsViewController: UIViewController {
     */
 
 }
-
-protocol SettingsViewControllerDelegate {
-	func settingsChanged(distanceUnits: String, bearingUnits: String)
-}
+//
+//protocol SettingsViewControllerDelegate {
+//	func settingsChanged(distanceUnits: String, bearingUnits: String)
+//}
