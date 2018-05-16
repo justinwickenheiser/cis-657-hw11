@@ -38,7 +38,7 @@ extension CLLocation {
         let R = 6371.0
         
         // compute the coordinates in radians
-        let p1 = (self.coordinate.latitude * .pi / 180.0, self.coordinate.longitude * Double.pi / 180.0)
+        let p1 = (self.coordinate.latitude * Double.pi / 180.0, self.coordinate.longitude * Double.pi / 180.0)
         
         // compute angular distance
         let ad = atDistance / R
@@ -46,6 +46,6 @@ extension CLLocation {
         let lon : Double = p1.1 + atan2(sin(withBearing) * sin(ad) * cos(p1.0), cos(ad) - sin(p1.0) * sin(lat))
         
         // create the CLLocation by converting from radians to decimal.
-        return CLLocation(latitude: lat * 180.0 / .pi, longitude: lon * 180.0 / Double.pi)
+        return CLLocation(latitude: lat * 180.0 / Double.pi, longitude: lon * 180.0 / Double.pi)
     }
 }
