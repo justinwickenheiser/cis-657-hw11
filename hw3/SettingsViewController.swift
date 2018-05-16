@@ -39,10 +39,10 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
 		
 		let detectEmptyTap = UITapGestureRecognizer(target: self, action: #selector(self.hidePicker))
 		self.view.addGestureRecognizer(detectEmptyTap)
-		let detectDistanceTap = UITapGestureRecognizer(target: lblDistanceUnits, action: #selector(self.setDistanceUnits))
-		self.view.addGestureRecognizer(detectDistanceTap)
-		let detectDegreeTap = UITapGestureRecognizer(target: lblDegreeUnits, action: #selector(self.setDegreeUnits))
-		self.view.addGestureRecognizer(detectDegreeTap)
+		let detectDistanceTap = UITapGestureRecognizer(target: self, action: #selector(self.setDistanceUnits))
+		lblDistanceUnits.addGestureRecognizer(detectDistanceTap)
+		let detectDegreeTap = UITapGestureRecognizer(target: self, action: #selector(self.setDegreeUnits))
+		lblDegreeUnits.addGestureRecognizer(detectDegreeTap)
 		
 		self.unitPicker.delegate = self
 		self.unitPicker.dataSource = self
