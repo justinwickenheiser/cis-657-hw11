@@ -44,13 +44,24 @@ class ViewController: UIViewController {
 		let loc1 = CLLocation(latitude: CLLocationDegrees((latP1.text! as NSString).doubleValue), longitude: CLLocationDegrees((longP1.text! as NSString).doubleValue))
 		let loc2 = CLLocation(latitude: CLLocationDegrees((latP2.text! as NSString).doubleValue), longitude: CLLocationDegrees((longP2.text! as NSString).doubleValue))
 		
-		var dist = loc1.distance(from:loc2)
-		dist = dist/1000
+        // Distance
+        let distInMeters = loc1.distance(from:loc2)
+        let distInKm = distInMeters/1000
+        if distanceUnits == "Kilometers" {
+            distance.text = "Distance: \(String(format:"%.2f",distInKm)) \(distanceUnits)"
+        } else {
+            let distInMiles = distInKm * 0.621371
+            distance.text = "Distance: \(String(format:"%.2f",distInMiles)) \(distanceUnits)"
+        }
 		
-		distance.text = "Distance: \(String(format:"%.2f",dist)) \(distanceUnits)"
-        
-        let bear = loc1.bearingToPoint(point:loc2);
-        bearing.text = "Bearing: \(String(format:"%.2f", bear)) \(degreeUnits)"
+		// Bearing
+        let bearingInDegrees = loc1.bearingToPoint(point:loc2);
+        if degreeUnits == "Degrees" {
+            bearing.text = "Bearing: \(String(format:"%.2f", bearingInDegrees)) \(degreeUnits)"
+        } else {
+            let bearingInMils = bearingInDegrees * 17.777777777778
+            bearing.text = "Bearing: \(String(format:"%.2f", bearingInMils)) \(degreeUnits)"
+        }
     }
     
     @IBAction func clear(_ sender: Any) {
@@ -67,8 +78,21 @@ class ViewController: UIViewController {
 			if let destVC = segue.destination.childViewControllers[0] as? SettingsViewController {
 				destVC.distanceUnits = self.distanceUnits
 				destVC.degreeUnits = self.degreeUnits
+                // set my(self) as the delegate in the destination
+                destVC.delegate = self
 			}
 		}
 	}
 }
 
+extension ViewController: SettingsViewControllerDelegate {
+    func settingsChanged(distanceUnits: String, bearingUnits: String) {
+        // set the units
+        self.distanceUnits = distanceUnits
+        self.degreeUnits = bearingUnits
+        // recalculate
+        self.calculate(self)
+    }
+    
+    
+}
