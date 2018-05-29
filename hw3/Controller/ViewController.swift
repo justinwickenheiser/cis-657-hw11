@@ -82,7 +82,7 @@ class ViewController: UIViewController {
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == "settingsSegue" {
-			if let destVC = segue.destination.childViewControllers[0] as? SettingsViewController {
+			if let destVC = segue.destination as? SettingsViewController {
 				destVC.distanceUnits = self.distanceUnits
 				destVC.degreeUnits = self.degreeUnits
                 // set my(self) as the delegate in the destination
