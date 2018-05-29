@@ -88,7 +88,11 @@ class ViewController: UIViewController {
                 // set my(self) as the delegate in the destination
                 destVC.delegate = self
 			}
-		}
+        } else if segue.identifier == "historySegue" {
+            if let destVC = segue.destination as? HistoryTableViewController {
+                destVC.entries = self.entries
+            }
+        }
 	}
 }
 
