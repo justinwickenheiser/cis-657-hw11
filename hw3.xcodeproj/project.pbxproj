@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A22EDDEB20BE0366004ADC95 /* LocationLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22EDDEA20BE0366004ADC95 /* LocationLookup.swift */; };
+		A22EDDED20BE0E18004ADC95 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22EDDEC20BE0E18004ADC95 /* HistoryTableViewController.swift */; };
 		A2CA616720B4DC9600183F70 /* GeoCalcTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CA616620B4DC9600183F70 /* GeoCalcTextField.swift */; };
 		A2CA616920B4DDF000183F70 /* GeoCalcLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CA616820B4DDF000183F70 /* GeoCalcLabel.swift */; };
 		A2CA616B20B4DE4E00183F70 /* GeoCalcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CA616A20B4DE4E00183F70 /* GeoCalcButton.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		A22EDDEA20BE0366004ADC95 /* LocationLookup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationLookup.swift; sourceTree = "<group>"; };
+		A22EDDEC20BE0E18004ADC95 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		A2CA616620B4DC9600183F70 /* GeoCalcTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCalcTextField.swift; sourceTree = "<group>"; };
 		A2CA616820B4DDF000183F70 /* GeoCalcLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCalcLabel.swift; sourceTree = "<group>"; };
 		A2CA616A20B4DE4E00183F70 /* GeoCalcButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCalcButton.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			children = (
 				D846C08720ABADA90082F1B7 /* SettingsViewController.swift */,
 				A2F8466A20AB9431006AB8D8 /* ViewController.swift */,
+				A22EDDEC20BE0E18004ADC95 /* HistoryTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				A2F8469720AB969A006AB8D8 /* DecimalMinusTextField.swift in Sources */,
 				A2F8469B20ABA4AE006AB8D8 /* CLLocationExtensions.swift in Sources */,
 				A2CA616720B4DC9600183F70 /* GeoCalcTextField.swift in Sources */,
+				A22EDDED20BE0E18004ADC95 /* HistoryTableViewController.swift in Sources */,
 				A2F8466B20AB9431006AB8D8 /* ViewController.swift in Sources */,
 				D846C08820ABADA90082F1B7 /* SettingsViewController.swift in Sources */,
 				A2CA616920B4DDF000183F70 /* GeoCalcLabel.swift in Sources */,
