@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var longP2: DecimalMinusTextField!
     @IBOutlet weak var distance: UILabel!
     @IBOutlet weak var bearing: UILabel!
+    
+    var entries: [LocationLookup] = []
 	
 	var distanceUnits = "Kilometers"
 	var degreeUnits = "Degrees"
@@ -45,6 +47,9 @@ class ViewController: UIViewController {
     @IBAction func calculate(_ sender: Any) {
 		let loc1 = CLLocation(latitude: CLLocationDegrees((latP1.text! as NSString).doubleValue), longitude: CLLocationDegrees((longP1.text! as NSString).doubleValue))
 		let loc2 = CLLocation(latitude: CLLocationDegrees((latP2.text! as NSString).doubleValue), longitude: CLLocationDegrees((longP2.text! as NSString).doubleValue))
+        
+        // Store the lat/longs of the two points
+        entries.append(LocationLookup(origLat: loc1.coordinate.latitude, origLng: loc1.coordinate.longitude, destLat: loc2.coordinate.latitude, destLng: loc2.coordinate.longitude, timestamp: loc1.timestamp))
 		
         // Distance
         let distInMeters = loc1.distance(from:loc2)
