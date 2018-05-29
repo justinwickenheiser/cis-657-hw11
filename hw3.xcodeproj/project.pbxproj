@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A22EDDEB20BE0366004ADC95 /* LocationLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22EDDEA20BE0366004ADC95 /* LocationLookup.swift */; };
 		A2CA616720B4DC9600183F70 /* GeoCalcTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CA616620B4DC9600183F70 /* GeoCalcTextField.swift */; };
 		A2CA616920B4DDF000183F70 /* GeoCalcLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CA616820B4DDF000183F70 /* GeoCalcLabel.swift */; };
 		A2CA616B20B4DE4E00183F70 /* GeoCalcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CA616A20B4DE4E00183F70 /* GeoCalcButton.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A22EDDEA20BE0366004ADC95 /* LocationLookup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationLookup.swift; sourceTree = "<group>"; };
 		A2CA616620B4DC9600183F70 /* GeoCalcTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCalcTextField.swift; sourceTree = "<group>"; };
 		A2CA616820B4DDF000183F70 /* GeoCalcLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCalcLabel.swift; sourceTree = "<group>"; };
 		A2CA616A20B4DE4E00183F70 /* GeoCalcButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCalcButton.swift; sourceTree = "<group>"; };
@@ -86,6 +88,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A22EDDE620BE02DC004ADC95 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D846C08720ABADA90082F1B7 /* SettingsViewController.swift */,
+				A2F8466A20AB9431006AB8D8 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A22EDDE720BE02EF004ADC95 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A2F8466F20AB9432006AB8D8 /* Assets.xcassets */,
+				A2F8469620AB969A006AB8D8 /* DecimalMinusTextField.swift */,
+				A2CA616A20B4DE4E00183F70 /* GeoCalcButton.swift */,
+				A2CA616820B4DDF000183F70 /* GeoCalcLabel.swift */,
+				A2CA616620B4DC9600183F70 /* GeoCalcTextField.swift */,
+				A2F8467120AB9432006AB8D8 /* LaunchScreen.storyboard */,
+				A2F8466C20AB9432006AB8D8 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A22EDDE820BE0313004ADC95 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A22EDDEA20BE0366004ADC95 /* LocationLookup.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A22EDDE920BE031D004ADC95 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A2F8469A20ABA4AE006AB8D8 /* CLLocationExtensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		A2F8465C20AB9431006AB8D8 = {
 			isa = PBXGroup;
 			children = (
@@ -109,18 +150,12 @@
 		A2F8466720AB9431006AB8D8 /* hw3 */ = {
 			isa = PBXGroup;
 			children = (
-				A2F8466820AB9431006AB8D8 /* AppDelegate.swift */,
-				A2CA616620B4DC9600183F70 /* GeoCalcTextField.swift */,
-				A2F8466A20AB9431006AB8D8 /* ViewController.swift */,
-				D846C08720ABADA90082F1B7 /* SettingsViewController.swift */,
-				A2F8466C20AB9432006AB8D8 /* Main.storyboard */,
-				A2F8466F20AB9432006AB8D8 /* Assets.xcassets */,
-				A2CA616820B4DDF000183F70 /* GeoCalcLabel.swift */,
-				A2CA616A20B4DE4E00183F70 /* GeoCalcButton.swift */,
-				A2F8467120AB9432006AB8D8 /* LaunchScreen.storyboard */,
 				A2F8467420AB9432006AB8D8 /* Info.plist */,
-				A2F8469620AB969A006AB8D8 /* DecimalMinusTextField.swift */,
-				A2F8469A20ABA4AE006AB8D8 /* CLLocationExtensions.swift */,
+				A2F8466820AB9431006AB8D8 /* AppDelegate.swift */,
+				A22EDDE620BE02DC004ADC95 /* Controller */,
+				A22EDDE820BE0313004ADC95 /* Model */,
+				A22EDDE920BE031D004ADC95 /* Utils */,
+				A22EDDE720BE02EF004ADC95 /* View */,
 			);
 			path = hw3;
 			sourceTree = "<group>";
@@ -281,6 +316,7 @@
 				A2F8466B20AB9431006AB8D8 /* ViewController.swift in Sources */,
 				D846C08820ABADA90082F1B7 /* SettingsViewController.swift in Sources */,
 				A2CA616920B4DDF000183F70 /* GeoCalcLabel.swift in Sources */,
+				A22EDDEB20BE0366004ADC95 /* LocationLookup.swift in Sources */,
 				A2F8466920AB9431006AB8D8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
