@@ -22,6 +22,7 @@
 		A2F8469720AB969A006AB8D8 /* DecimalMinusTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F8469620AB969A006AB8D8 /* DecimalMinusTextField.swift */; };
 		A2F8469B20ABA4AE006AB8D8 /* CLLocationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F8469A20ABA4AE006AB8D8 /* CLLocationExtensions.swift */; };
 		D846C08820ABADA90082F1B7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D846C08720ABADA90082F1B7 /* SettingsViewController.swift */; };
+		D8FE491320BE1B7700587968 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FE491220BE1B7700587968 /* HistoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		A2F8469620AB969A006AB8D8 /* DecimalMinusTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalMinusTextField.swift; sourceTree = "<group>"; };
 		A2F8469A20ABA4AE006AB8D8 /* CLLocationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLLocationExtensions.swift; sourceTree = "<group>"; };
 		D846C08720ABADA90082F1B7 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D8FE491220BE1B7700587968 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				A2CA616620B4DC9600183F70 /* GeoCalcTextField.swift */,
 				A2F8467120AB9432006AB8D8 /* LaunchScreen.storyboard */,
 				A2F8466C20AB9432006AB8D8 /* Main.storyboard */,
+				D8FE491220BE1B7700587968 /* HistoryTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				A2F8466B20AB9431006AB8D8 /* ViewController.swift in Sources */,
 				D846C08820ABADA90082F1B7 /* SettingsViewController.swift in Sources */,
 				A2CA616920B4DDF000183F70 /* GeoCalcLabel.swift in Sources */,
+				D8FE491320BE1B7700587968 /* HistoryTableViewCell.swift in Sources */,
 				A22EDDEB20BE0366004ADC95 /* LocationLookup.swift in Sources */,
 				A2F8466920AB9431006AB8D8 /* AppDelegate.swift in Sources */,
 			);
