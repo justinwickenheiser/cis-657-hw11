@@ -47,14 +47,14 @@ class SettingsViewController: UIViewController {
     }
     
 	@IBAction func cancelSettings(_ sender: Any) {
-       self.dismiss(animated: true, completion: nil)
+       _ = self.navigationController?.popViewController(animated: true)
 	}
     // Call the delegate to pass back the data to the presenting VC
 	@IBAction func saveSettings(_ sender: Any) {
         if let d = self.delegate {
             d.settingsChanged(distanceUnits: distanceUnits!, bearingUnits: degreeUnits!)
         }
-        self.dismiss(animated: true, completion: nil)
+        _ = self.navigationController?.popViewController(animated: true)
 	}
 	
 	@objc func hidePicker() {
