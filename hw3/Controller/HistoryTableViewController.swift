@@ -13,15 +13,11 @@ protocol HistoryTableViewControllerDelegate {
 }
 
 class HistoryTableViewController: UITableViewController {
-    
-	var entries : [LocationLookup] = [
-		LocationLookup(origLat: 90.0, origLng: 0.0, destLat: -90.0, destLng: 0.0,
-					   timestamp: Date.distantPast),
-		LocationLookup(origLat: -90.0, origLng: 0.0, destLat: 90.0, destLng: 0.0,
-					   timestamp: Date.distantFuture)]
+	
+	var entries : [LocationLookup] = []
 	
 	var historyDelegate:HistoryTableViewControllerDelegate?
-
+	
 	var tableViewData: [(sectionHeader: String, entries: [LocationLookup])]? {
 		didSet {
 			DispatchQueue.main.async {
@@ -61,53 +57,53 @@ class HistoryTableViewController: UITableViewController {
 		self.tableViewData = tmpData
 	}
 	
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
 		self.sortIntoSections(entries: self.entries)
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+		// Uncomment the following line to preserve selection between presentations
+		// self.clearsSelectionOnViewWillAppear = false
+		
+		// Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+		// self.navigationItem.rightBarButtonItem = self.editButtonItem
+	}
+	
+	override func didReceiveMemoryWarning() {
+		super.didReceiveMemoryWarning()
+		// Dispose of any resources that can be recreated.
+	}
+	
+	// MARK: - Table view data source
+	
+	override func numberOfSections(in tableView: UITableView) -> Int {
+		// #warning Incomplete implementation, return the number of sections
 		if let data = self.tableViewData {
 			return data.count
 		} else {
 			return 0
 		}
 	}
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+	
+	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		// #warning Incomplete implementation, return the number of rows
 		if let sectionInfo = self.tableViewData?[section] {
 			return sectionInfo.entries.count
 		} else {
 			return 0
 		}
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FancyCell", for: indexPath) as! HistoryTableViewCell
+	}
+	
+	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell = tableView.dequeueReusableCell(withIdentifier: "FancyCell", for: indexPath) as! HistoryTableViewCell
 		
 		if let ll = self.tableViewData?[indexPath.section].entries[indexPath.row] {
 			cell.origPoint.text = "(\(ll.origLat.roundTo(places:4)), \(ll.origLng.roundTo(places:4)))"
 			cell.destPoint.text = "(\(ll.destLat.roundTo(places:4)), \(ll.destLng.roundTo(places:4)))"
 			cell.timestamp.text = ll.timestamp.description
 		}
-
-        return cell
-    }
+		
+		return cell
+	}
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath:
 		IndexPath) {
@@ -126,6 +122,28 @@ class HistoryTableViewController: UITableViewController {
 		section: Int) ->
 		String? {
 			return self.tableViewData?[section].sectionHeader
+	}
+	
+	override func tableView(_ tableView: UITableView, heightForRowAt indexPath:
+		IndexPath) ->
+		CGFloat {
+			return 200.0
+	}
+	override func tableView(_ tableView: UITableView, willDisplayFooterView view:
+		UIView, forSection
+		section: Int) {
+		let header = view as! UITableViewHeaderFooterView
+		header.textLabel?.textColor = FOREGROUND_COLOR
+		header.contentView.backgroundColor = BACKGROUND_COLOR
+	}
+	
+	
+	override func tableView(_ tableView: UITableView, willDisplayHeaderView view:
+		UIView,
+							forSection section: Int) {
+		let header = view as! UITableViewHeaderFooterView
+		header.textLabel?.textColor = FOREGROUND_COLOR
+		header.contentView.backgroundColor = BACKGROUND_COLOR
 	}
 }
 

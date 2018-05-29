@@ -18,8 +18,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var distance: UILabel!
     @IBOutlet weak var bearing: UILabel!
     
-    var entries: [LocationLookup] = []
-	
+	var entries : [LocationLookup] = [
+		LocationLookup(origLat: 90.0, origLng: 0.0, destLat: -90.0, destLng: 0.0,
+					   timestamp: Date.distantPast),
+		LocationLookup(origLat: -90.0, origLng: 0.0, destLat: 90.0, destLng: 0.0,
+					   timestamp: Date.distantFuture)]
 	var distanceUnits = "Kilometers"
 	var degreeUnits = "Degrees"
     

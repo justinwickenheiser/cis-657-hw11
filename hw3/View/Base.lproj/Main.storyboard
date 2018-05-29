@@ -182,11 +182,11 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Pef-XM-IOc">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wrB-Wy-xmH">
-                                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="128"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="wrB-Wy-xmH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="199.5"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f7b-Qi-C4u">
-                                                    <rect key="frame" x="187.5" y="0.0" width="187.5" height="128"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="f7b-Qi-C4u">
+                                                    <rect key="frame" x="187.5" y="0.0" width="187.5" height="199.5"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -372,4 +372,8 @@
             <point key="canvasLocation" x="132" y="667.91604197901052"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="540" height="960"/>
+        <image name="Image-1" width="1365" height="2048"/>
+    </resources>
 </document>
