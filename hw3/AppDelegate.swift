@@ -8,7 +8,8 @@
 
 import UIKit
 import GooglePlaces
-let GOOGLE_PLACES_API_KEY = "YOUR-KEY-VALUE-GOES-HERE"
+import Firebase
+let GOOGLE_PLACES_API_KEY = "AIzaSyD-FmteMwLYrb3eFDPxjHlmzRgd7aTfZ7Q"
 
 let BACKGROUND_COLOR = UIColor.init(red:0.25, green:0.1, blue:0.4, alpha:1.00) // Blueish
 let FOREGROUND_COLOR = UIColor.init(red: 0.8, green: 0.9, blue: 0.3, alpha: 1.0) // Tannish
@@ -31,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navAppearance.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
 		
 		GMSPlacesClient.provideAPIKey(GOOGLE_PLACES_API_KEY)
+		FirebaseApp.configure()
         return true
     }
 

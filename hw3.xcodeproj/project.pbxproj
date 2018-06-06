@@ -25,6 +25,8 @@
 		A2F8469B20ABA4AE006AB8D8 /* CLLocationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F8469A20ABA4AE006AB8D8 /* CLLocationExtensions.swift */; };
 		D846C08820ABADA90082F1B7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D846C08720ABADA90082F1B7 /* SettingsViewController.swift */; };
 		D8DC744920C75ED000F8683B /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DC744820C75ED000F8683B /* LocationSearchViewController.swift */; };
+		D8F252E720C7681E00C06F17 /* Date+ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F252E620C7681E00C06F17 /* Date+ISO8601.swift */; };
+		D8F252EB20C76C5200C06F17 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8F252EA20C76C5200C06F17 /* GoogleService-Info.plist */; };
 		D8FE491320BE1B7700587968 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FE491220BE1B7700587968 /* HistoryTableViewCell.swift */; };
 		E8A0AAC2C8D2B0AAF45DD3E7 /* Pods_hw3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF06B67D07EA0DA2CB8A2DB /* Pods_hw3.framework */; };
 /* End PBXBuildFile section */
@@ -75,7 +77,9 @@
 		A87D5535698576FBFC7D43F3 /* Pods-hw3UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hw3UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-hw3UITests/Pods-hw3UITests.release.xcconfig"; sourceTree = "<group>"; };
 		AF8A0452EC39B3662913C162 /* Pods-hw3UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hw3UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hw3UITests/Pods-hw3UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D846C08720ABADA90082F1B7 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		D8DC744820C75ED000F8683B /* LocationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationSearchViewController.swift; path = Controller/LocationSearchViewController.swift; sourceTree = "<group>"; };
+		D8DC744820C75ED000F8683B /* LocationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewController.swift; sourceTree = "<group>"; };
+		D8F252E620C7681E00C06F17 /* Date+ISO8601.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ISO8601.swift"; sourceTree = "<group>"; };
+		D8F252EA20C76C5200C06F17 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D8FE491220BE1B7700587968 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		DD1277F242F72A1C45CC3D30 /* Pods-hw3Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hw3Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hw3Tests/Pods-hw3Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA4A43BBC24913387FF10062 /* Pods-hw3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hw3.release.xcconfig"; path = "Pods/Target Support Files/Pods-hw3/Pods-hw3.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 		A22EDDE620BE02DC004ADC95 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D8DC744820C75ED000F8683B /* LocationSearchViewController.swift */,
 				D846C08720ABADA90082F1B7 /* SettingsViewController.swift */,
 				A2F8466A20AB9431006AB8D8 /* ViewController.swift */,
 				A22EDDEC20BE0E18004ADC95 /* HistoryTableViewController.swift */,
@@ -169,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				A2F8469A20ABA4AE006AB8D8 /* CLLocationExtensions.swift */,
+				D8F252E620C7681E00C06F17 /* Date+ISO8601.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -176,6 +182,7 @@
 		A2F8465C20AB9431006AB8D8 = {
 			isa = PBXGroup;
 			children = (
+				D8F252EA20C76C5200C06F17 /* GoogleService-Info.plist */,
 				A2F8466720AB9431006AB8D8 /* hw3 */,
 				A2F8467C20AB9432006AB8D8 /* hw3Tests */,
 				A2F8468720AB9432006AB8D8 /* hw3UITests */,
@@ -204,7 +211,6 @@
 				A22EDDE820BE0313004ADC95 /* Model */,
 				A22EDDE920BE031D004ADC95 /* Utils */,
 				A22EDDE720BE02EF004ADC95 /* View */,
-				D8DC744820C75ED000F8683B /* LocationSearchViewController.swift */,
 			);
 			path = hw3;
 			sourceTree = "<group>";
@@ -337,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2F8467320AB9432006AB8D8 /* LaunchScreen.storyboard in Resources */,
+				D8F252EB20C76C5200C06F17 /* GoogleService-Info.plist in Resources */,
 				A2F8467020AB9432006AB8D8 /* Assets.xcassets in Resources */,
 				A2F8466E20AB9432006AB8D8 /* Main.storyboard in Resources */,
 			);
@@ -443,10 +450,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-hw3/Pods-hw3-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -465,6 +476,7 @@
 				A2F8469B20ABA4AE006AB8D8 /* CLLocationExtensions.swift in Sources */,
 				A2CA616720B4DC9600183F70 /* GeoCalcTextField.swift in Sources */,
 				A22EDDED20BE0E18004ADC95 /* HistoryTableViewController.swift in Sources */,
+				D8F252E720C7681E00C06F17 /* Date+ISO8601.swift in Sources */,
 				A2F8466B20AB9431006AB8D8 /* ViewController.swift in Sources */,
 				D846C08820ABADA90082F1B7 /* SettingsViewController.swift in Sources */,
 				D8DC744920C75ED000F8683B /* LocationSearchViewController.swift in Sources */,

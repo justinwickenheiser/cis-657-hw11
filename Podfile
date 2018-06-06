@@ -18,4 +18,5 @@ target 'hw3' do
   end
 pod 'Eureka'
 pod 'GooglePlacePicker'
+pod 'Firebase/Database'
 end

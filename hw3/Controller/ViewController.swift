@@ -8,9 +8,12 @@
 
 import UIKit
 import CoreLocation
+import FirebaseDatabase
 
 class ViewController: UIViewController {
 
+	fileprivate var ref : DatabaseReference?
+	
     @IBOutlet weak var latP1: DecimalMinusTextField!
     @IBOutlet weak var longP1: DecimalMinusTextField!
     @IBOutlet weak var latP2: DecimalMinusTextField!
@@ -35,8 +38,34 @@ class ViewController: UIViewController {
         let detectTouch = UITapGestureRecognizer(target: self, action:
             #selector(self.dismissKeyboard))
         self.view.addGestureRecognizer(detectTouch)
+		
+		self.ref = Database.database().reference()
+		self.registerForFireBaseUpdates()
     }
 
+	fileprivate func registerForFireBaseUpdates()
+	{
+		self.ref!.child("history").observe(.value, with: { snapshot in
+			if let postDict = snapshot.value as? [String : AnyObject] {
+				var tmpItems = [LocationLookup]()
+				for (_,val) in postDict.enumerated() {
+					let entry = val.1 as! Dictionary<String,AnyObject>
+					let timestamp = entry["timestamp"] as! String?
+					let origLat = entry["origLat"] as! Double?
+					let origLng = entry["origLng"] as! Double?
+					let destLat = entry["destLat"] as! Double?
+					let destLng = entry["destLng"] as! Double?
+					tmpItems.append(LocationLookup(origLat: origLat!,
+												   origLng: origLng!, destLat: destLat!,
+												   destLng: destLng!,
+												   timestamp: (timestamp?.dateFromISO8601)!))
+					
+				}
+				self.entries = tmpItems
+			}
+		})
+	}
+	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -52,7 +81,9 @@ class ViewController: UIViewController {
 		let loc2 = CLLocation(latitude: CLLocationDegrees((latP2.text! as NSString).doubleValue), longitude: CLLocationDegrees((longP2.text! as NSString).doubleValue))
         
         // Store the lat/longs of the two points
-        entries.append(LocationLookup(origLat: loc1.coordinate.latitude, origLng: loc1.coordinate.longitude, destLat: loc2.coordinate.latitude, destLng: loc2.coordinate.longitude, timestamp: loc1.timestamp))
+		let entry = LocationLookup(origLat: (latP1.text! as NSString).doubleValue, origLng: (longP1.text! as NSString).doubleValue, destLat: (latP2.text! as NSString).doubleValue, destLng: (longP2.text! as NSString).doubleValue, timestamp: Date())
+		let newChild = self.ref?.child("history").childByAutoId()
+		newChild?.setValue(self.toDictionary(vals: entry))
 		
         // Distance
         let distInMeters = loc1.distance(from:loc2)
@@ -101,6 +132,16 @@ class ViewController: UIViewController {
 				dest.delegate = self
 			}
 		}
+	}
+	
+	func toDictionary(vals: LocationLookup) -> NSDictionary {
+		return [
+			"timestamp": NSString(string: (vals.timestamp.iso8601)),
+			"origLat" : NSNumber(value: vals.origLat),
+			"origLng" : NSNumber(value: vals.origLng),
+			"destLat" : NSNumber(value: vals.destLat),
+			"destLng" : NSNumber(value: vals.destLng),
+		]
 	}
 }
 
