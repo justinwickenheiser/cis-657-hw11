@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UYJ-rc-sBq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UYJ-rc-sBq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -91,6 +92,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oj-gD-RLf" customClass="GeoCalcButton" customModule="hw3" customModuleProvider="target">
+                                <rect key="frame" x="76" y="617" width="222" height="30"/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <segue destination="3di-OU-rCW" kind="show" identifier="searchSegue" id="vd3-G8-GvS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -100,12 +108,15 @@
                             <constraint firstItem="huf-e3-35q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="30j-4D-r6u"/>
                             <constraint firstItem="IDG-2g-bkv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="4b8-iU-suh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5LM-lK-JjV" secondAttribute="trailing" constant="8" id="CQU-p7-aJC"/>
+                            <constraint firstItem="1oj-gD-RLf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GnL-Ae-qNY"/>
                             <constraint firstItem="5LM-lK-JjV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="NGR-8R-WoJ"/>
                             <constraint firstItem="tON-c0-0ck" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="SFp-de-JbT"/>
                             <constraint firstItem="tON-c0-0ck" firstAttribute="top" secondItem="huf-e3-35q" secondAttribute="bottom" constant="8" symbolic="YES" id="SVP-5G-Cmd"/>
                             <constraint firstItem="K2X-1o-Os7" firstAttribute="top" secondItem="5LM-lK-JjV" secondAttribute="bottom" constant="8" id="SYC-eb-DOT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K2X-1o-Os7" secondAttribute="trailing" constant="8" id="b2Y-qn-0hI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tON-c0-0ck" secondAttribute="trailing" constant="8" id="c2q-xr-n9m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1oj-gD-RLf" secondAttribute="bottom" constant="20" id="g2C-h9-mww"/>
+                            <constraint firstItem="1oj-gD-RLf" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:3" id="gMQ-Go-u7A"/>
                             <constraint firstItem="huf-e3-35q" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:3" id="j56-U8-nPJ"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="huf-e3-35q" secondAttribute="trailing" constant="20" symbolic="YES" id="mLM-CV-bpH"/>
                             <constraint firstItem="K2X-1o-Os7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="moi-DG-pFp"/>
@@ -352,6 +363,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MpY-Ow-0T6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="1439.7301349325339"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RhP-td-pGI">
+            <objects>
+                <viewController id="3di-OU-rCW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OLW-Mx-aPb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="y6f-Mh-aqK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h5T-eg-1tH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2012" y="1440"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jXH-iB-OIg">
