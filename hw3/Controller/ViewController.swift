@@ -96,7 +96,11 @@ class ViewController: UIViewController {
                 destVC.entries = self.entries
 				destVC.historyDelegate = self
             }
-        }
+		} else if segue.identifier == "searchSegue" {
+			if let dest = segue.destination as? LocationSearchViewController {
+				dest.delegate = self
+			}
+		}
 	}
 }
 
@@ -115,6 +119,16 @@ extension ViewController: SettingsViewControllerDelegate, HistoryTableViewContro
 		latP2.text = "\(entry.destLat)"
 		longP2.text = "\(entry.destLng)"
 		
+		self.calculate(self)
+	}
+}
+extension ViewController: LocationSearchDelegate {
+	func set(calculationData: LocationLookup)
+	{
+		self.latP1.text = "\(calculationData.origLat)"
+		self.longP1.text = "\(calculationData.origLng)"
+		self.latP2.text = "\(calculationData.destLat)"
+		self.longP2.text = "\(calculationData.destLng)"
 		self.calculate(self)
 	}
 }

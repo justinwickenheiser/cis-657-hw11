@@ -16,6 +16,6 @@ target 'hw3' do
     inherit! :search_paths
     # Pods for testing
   end
-pod 'Eureka', '~> 2.0.0-beta.1'
+pod 'Eureka'
 pod 'GooglePlacePicker'
 end
