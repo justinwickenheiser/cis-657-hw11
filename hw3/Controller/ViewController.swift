@@ -14,7 +14,13 @@ class ViewController: UIViewController {
 
 	fileprivate var ref : DatabaseReference?
 	
-    @IBOutlet weak var latP1: DecimalMinusTextField!
+	@IBOutlet weak var imgLoc1: UIImageView!
+	@IBOutlet weak var imgLoc2: UIImageView!
+	@IBOutlet weak var lblSummary1: GeoCalcLabel!
+	@IBOutlet weak var lblSummary2: GeoCalcLabel!
+	@IBOutlet weak var lblTemp1: GeoCalcLabel!
+	@IBOutlet weak var lblTemp2: GeoCalcLabel!
+	@IBOutlet weak var latP1: DecimalMinusTextField!
     @IBOutlet weak var longP1: DecimalMinusTextField!
     @IBOutlet weak var latP2: DecimalMinusTextField!
     @IBOutlet weak var longP2: DecimalMinusTextField!
