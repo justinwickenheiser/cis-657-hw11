@@ -26,6 +26,8 @@
 		A2F8469B20ABA4AE006AB8D8 /* CLLocationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F8469A20ABA4AE006AB8D8 /* CLLocationExtensions.swift */; };
 		D846C08820ABADA90082F1B7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D846C08720ABADA90082F1B7 /* SettingsViewController.swift */; };
 		D8DC744920C75ED000F8683B /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DC744820C75ED000F8683B /* LocationSearchViewController.swift */; };
+		D8E5AE7620D08542005F00DC /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E5AE7520D08542005F00DC /* Weather.swift */; };
+		D8E5AE7820D085C3005F00DC /* DarkSkyWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E5AE7720D085C3005F00DC /* DarkSkyWeatherService.swift */; };
 		D8F252E720C7681E00C06F17 /* Date+ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F252E620C7681E00C06F17 /* Date+ISO8601.swift */; };
 		D8F252EB20C76C5200C06F17 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8F252EA20C76C5200C06F17 /* GoogleService-Info.plist */; };
 		D8FE491320BE1B7700587968 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FE491220BE1B7700587968 /* HistoryTableViewCell.swift */; };
@@ -80,6 +82,8 @@
 		AF8A0452EC39B3662913C162 /* Pods-hw3UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hw3UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hw3UITests/Pods-hw3UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D846C08720ABADA90082F1B7 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D8DC744820C75ED000F8683B /* LocationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewController.swift; sourceTree = "<group>"; };
+		D8E5AE7520D08542005F00DC /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		D8E5AE7720D085C3005F00DC /* DarkSkyWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkSkyWeatherService.swift; sourceTree = "<group>"; };
 		D8F252E620C7681E00C06F17 /* Date+ISO8601.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ISO8601.swift"; sourceTree = "<group>"; };
 		D8F252EA20C76C5200C06F17 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D8FE491220BE1B7700587968 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				A22EDDEA20BE0366004ADC95 /* LocationLookup.swift */,
+				D8E5AE7520D08542005F00DC /* Weather.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 			children = (
 				A2F8469A20ABA4AE006AB8D8 /* CLLocationExtensions.swift */,
 				D8F252E620C7681E00C06F17 /* Date+ISO8601.swift */,
+				D8E5AE7720D085C3005F00DC /* DarkSkyWeatherService.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -481,12 +487,14 @@
 				A2CA616720B4DC9600183F70 /* GeoCalcTextField.swift in Sources */,
 				A22EDDED20BE0E18004ADC95 /* HistoryTableViewController.swift in Sources */,
 				D8F252E720C7681E00C06F17 /* Date+ISO8601.swift in Sources */,
+				D8E5AE7620D08542005F00DC /* Weather.swift in Sources */,
 				A2F8466B20AB9431006AB8D8 /* ViewController.swift in Sources */,
 				D846C08820ABADA90082F1B7 /* SettingsViewController.swift in Sources */,
 				D8DC744920C75ED000F8683B /* LocationSearchViewController.swift in Sources */,
 				A2CA616920B4DDF000183F70 /* GeoCalcLabel.swift in Sources */,
 				D8FE491320BE1B7700587968 /* HistoryTableViewCell.swift in Sources */,
 				A22EDDEB20BE0366004ADC95 /* LocationLookup.swift in Sources */,
+				D8E5AE7820D085C3005F00DC /* DarkSkyWeatherService.swift in Sources */,
 				A2F8466920AB9431006AB8D8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

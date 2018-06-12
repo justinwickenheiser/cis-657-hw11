@@ -34,6 +34,8 @@ class ViewController: UIViewController {
 					   timestamp: Date.distantFuture)]
 	var distanceUnits = "Kilometers"
 	var degreeUnits = "Degrees"
+	
+	let wAPI = DarkSkyWeatherService.getInstance()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -109,6 +111,29 @@ class ViewController: UIViewController {
             let bearingInMils = bearingInDegrees * 17.777777777778
             bearing.text = "Bearing: \(String(format:"%.2f", bearingInMils)) \(degreeUnits)"
         }
+		
+		wAPI.getWeatherForDate(date: Date(), forLocation: (loc1.coordinate.latitude, loc1.coordinate.longitude)) { (weather) in
+			
+			if let w = weather {
+				DispatchQueue.main.async {
+					// TODO: Bind the weather object attributes to the view here
+					self.imgLoc1.image = UIImage.init(named: w.iconName)
+					self.lblTemp1.text = "\(w.temperature.roundTo(places: 2))°"
+					self.lblSummary1.text = w.summary
+				}
+			}
+		}
+		wAPI.getWeatherForDate(date: Date(), forLocation: (loc2.coordinate.latitude, loc2.coordinate.longitude)) { (weather) in
+			
+			if let w = weather {
+				DispatchQueue.main.async {
+					// TODO: Bind the weather object attributes to the view here
+					self.imgLoc2.image = UIImage.init(named: w.iconName)
+					self.lblTemp2.text = "\(w.temperature.roundTo(places: 2))°"
+					self.lblSummary2.text = w.summary
+				}
+			}
+		}
     }
     
     @IBAction func clear(_ sender: Any) {

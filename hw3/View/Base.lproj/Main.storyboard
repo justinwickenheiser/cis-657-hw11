@@ -100,47 +100,53 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nmc-NL-VzS">
-                                <rect key="frame" x="0.0" y="242.5" width="375" height="128"/>
+                                <rect key="frame" x="8" y="250.5" width="375" height="122.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Dn-ba-VZv">
-                                        <rect key="frame" x="0.0" y="0.0" width="183.5" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="122.5" height="122.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="5Dn-ba-VZv" secondAttribute="height" multiplier="1:1" id="5iS-Jh-aGg"/>
+                                        </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzc-aW-Oa4" customClass="GeoCalcLabel" customModule="hw3" customModuleProvider="target">
-                                        <rect key="frame" x="191.5" y="54" width="183.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzc-aW-Oa4" customClass="GeoCalcLabel" customModule="hw3" customModuleProvider="target">
+                                        <rect key="frame" x="130.5" y="36.5" width="244.5" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="jzc-aW-Oa4" firstAttribute="width" secondItem="5Dn-ba-VZv" secondAttribute="width" id="iVJ-go-AZS"/>
+                                    <constraint firstItem="jzc-aW-Oa4" firstAttribute="width" secondItem="5Dn-ba-VZv" secondAttribute="width" multiplier="2:1" id="iVJ-go-AZS"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hce-YZ-oKa" customClass="GeoCalcLabel" customModule="hw3" customModuleProvider="target">
-                                <rect key="frame" x="8" y="378.5" width="359" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hce-YZ-oKa" customClass="GeoCalcLabel" customModule="hw3" customModuleProvider="target">
+                                <rect key="frame" x="8" y="381" width="359" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Sfy-CB-bRl">
-                                <rect key="frame" x="0.0" y="407" width="375" height="128"/>
+                                <rect key="frame" x="8" y="397" width="375" height="122.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="71z-vx-oAE">
-                                        <rect key="frame" x="0.0" y="0.0" width="183.5" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="122.5" height="122.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="71z-vx-oAE" secondAttribute="height" multiplier="1:1" id="iJ1-Cz-Bsz"/>
+                                        </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmL-Z3-3z9" customClass="GeoCalcLabel" customModule="hw3" customModuleProvider="target">
-                                        <rect key="frame" x="191.5" y="54" width="183.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmL-Z3-3z9" customClass="GeoCalcLabel" customModule="hw3" customModuleProvider="target">
+                                        <rect key="frame" x="130.5" y="36.5" width="244.5" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="MmL-Z3-3z9" firstAttribute="width" secondItem="71z-vx-oAE" secondAttribute="width" id="1Nv-Sc-9Le"/>
+                                    <constraint firstItem="MmL-Z3-3z9" firstAttribute="width" secondItem="71z-vx-oAE" secondAttribute="width" multiplier="2:1" id="1Nv-Sc-9Le"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lns-2C-HjO" customClass="GeoCalcLabel" customModule="hw3" customModuleProvider="target">
-                                <rect key="frame" x="8" y="543" width="359" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lns-2C-HjO" customClass="GeoCalcLabel" customModule="hw3" customModuleProvider="target">
+                                <rect key="frame" x="8" y="527.5" width="359" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -152,31 +158,31 @@
                             <constraint firstItem="5LM-lK-JjV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="2YJ-oR-KZ4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IDG-2g-bkv" secondAttribute="trailing" constant="8" id="2uD-i5-bsh"/>
                             <constraint firstItem="huf-e3-35q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="30j-4D-r6u"/>
-                            <constraint firstItem="Sfy-CB-bRl" firstAttribute="top" secondItem="Hce-YZ-oKa" secondAttribute="bottom" constant="8" id="3sF-6F-6Qw"/>
                             <constraint firstItem="IDG-2g-bkv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="4b8-iU-suh"/>
+                            <constraint firstItem="nmc-NL-VzS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="ACO-Nl-TIu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5LM-lK-JjV" secondAttribute="trailing" constant="8" id="CQU-p7-aJC"/>
-                            <constraint firstItem="Sfy-CB-bRl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GBI-cH-GZ6"/>
+                            <constraint firstItem="nmc-NL-VzS" firstAttribute="top" secondItem="IDG-2g-bkv" secondAttribute="bottom" constant="16" id="E5t-kl-zFT"/>
                             <constraint firstItem="1oj-gD-RLf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GnL-Ae-qNY"/>
                             <constraint firstItem="5LM-lK-JjV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="NGR-8R-WoJ"/>
+                            <constraint firstItem="Sfy-CB-bRl" firstAttribute="top" secondItem="Hce-YZ-oKa" secondAttribute="bottom" constant="16" id="OTe-qL-YgB"/>
                             <constraint firstItem="Hce-YZ-oKa" firstAttribute="top" secondItem="nmc-NL-VzS" secondAttribute="bottom" constant="8" id="Ocj-Xt-Yh1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nmc-NL-VzS" secondAttribute="trailing" id="QKH-mv-ofB"/>
                             <constraint firstItem="tON-c0-0ck" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="SFp-de-JbT"/>
                             <constraint firstItem="tON-c0-0ck" firstAttribute="top" secondItem="huf-e3-35q" secondAttribute="bottom" constant="8" symbolic="YES" id="SVP-5G-Cmd"/>
                             <constraint firstItem="K2X-1o-Os7" firstAttribute="top" secondItem="5LM-lK-JjV" secondAttribute="bottom" constant="8" id="SYC-eb-DOT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lns-2C-HjO" secondAttribute="trailing" constant="8" id="Ucf-VU-Z3E"/>
-                            <constraint firstItem="Sfy-CB-bRl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WxK-in-bMk"/>
-                            <constraint firstItem="nmc-NL-VzS" firstAttribute="top" secondItem="IDG-2g-bkv" secondAttribute="bottom" constant="8" id="Zcu-r6-8cr"/>
+                            <constraint firstItem="Sfy-CB-bRl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="V03-Sk-U5S"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K2X-1o-Os7" secondAttribute="trailing" constant="8" id="b2Y-qn-0hI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tON-c0-0ck" secondAttribute="trailing" constant="8" id="c2q-xr-n9m"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1oj-gD-RLf" secondAttribute="bottom" constant="20" id="g2C-h9-mww"/>
                             <constraint firstItem="1oj-gD-RLf" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:3" id="gMQ-Go-u7A"/>
                             <constraint firstItem="Hce-YZ-oKa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="htS-W3-uiP"/>
                             <constraint firstItem="huf-e3-35q" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:3" id="j56-U8-nPJ"/>
+                            <constraint firstItem="Sfy-CB-bRl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="8" id="krK-YJ-oIY"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="huf-e3-35q" secondAttribute="trailing" constant="20" symbolic="YES" id="mLM-CV-bpH"/>
                             <constraint firstItem="K2X-1o-Os7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="moi-DG-pFp"/>
+                            <constraint firstItem="nmc-NL-VzS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="8" id="pck-Vc-7ZX"/>
                             <constraint firstItem="lns-2C-HjO" firstAttribute="top" secondItem="Sfy-CB-bRl" secondAttribute="bottom" constant="8" id="q4g-UK-Syu"/>
                             <constraint firstItem="IDG-2g-bkv" firstAttribute="top" secondItem="tON-c0-0ck" secondAttribute="bottom" constant="8" symbolic="YES" id="qms-Te-dIB"/>
-                            <constraint firstItem="nmc-NL-VzS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rBh-Yh-sUY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hce-YZ-oKa" secondAttribute="trailing" constant="8" id="sfY-5Y-qAf"/>
                             <constraint firstItem="K2X-1o-Os7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:3" id="vuw-p9-5mR"/>
                             <constraint firstItem="lns-2C-HjO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="w3C-5U-qhd"/>
