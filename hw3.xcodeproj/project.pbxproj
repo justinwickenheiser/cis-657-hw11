@@ -14,6 +14,7 @@
 		A2CA616720B4DC9600183F70 /* GeoCalcTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CA616620B4DC9600183F70 /* GeoCalcTextField.swift */; };
 		A2CA616920B4DDF000183F70 /* GeoCalcLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CA616820B4DDF000183F70 /* GeoCalcLabel.swift */; };
 		A2CA616B20B4DE4E00183F70 /* GeoCalcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CA616A20B4DE4E00183F70 /* GeoCalcButton.swift */; };
+		A2E3C18F20D07D7C007248B4 /* Weather.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2E3C18E20D07D7C007248B4 /* Weather.xcassets */; };
 		A2F8466920AB9431006AB8D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F8466820AB9431006AB8D8 /* AppDelegate.swift */; };
 		A2F8466B20AB9431006AB8D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F8466A20AB9431006AB8D8 /* ViewController.swift */; };
 		A2F8466E20AB9432006AB8D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2F8466C20AB9432006AB8D8 /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 		A2CA616620B4DC9600183F70 /* GeoCalcTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCalcTextField.swift; sourceTree = "<group>"; };
 		A2CA616820B4DDF000183F70 /* GeoCalcLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCalcLabel.swift; sourceTree = "<group>"; };
 		A2CA616A20B4DE4E00183F70 /* GeoCalcButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCalcButton.swift; sourceTree = "<group>"; };
+		A2E3C18E20D07D7C007248B4 /* Weather.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Weather.xcassets; sourceTree = "<group>"; };
 		A2F8466520AB9431006AB8D8 /* hw3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hw3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2F8466820AB9431006AB8D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2F8466A20AB9431006AB8D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				A2F8466F20AB9432006AB8D8 /* Assets.xcassets */,
+				A2E3C18E20D07D7C007248B4 /* Weather.xcassets */,
 				A2F8469620AB969A006AB8D8 /* DecimalMinusTextField.swift */,
 				A2CA616A20B4DE4E00183F70 /* GeoCalcButton.swift */,
 				A2CA616820B4DDF000183F70 /* GeoCalcLabel.swift */,
@@ -342,6 +345,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2E3C18F20D07D7C007248B4 /* Weather.xcassets in Resources */,
 				A2F8467320AB9432006AB8D8 /* LaunchScreen.storyboard in Resources */,
 				D8F252EB20C76C5200C06F17 /* GoogleService-Info.plist in Resources */,
 				A2F8467020AB9432006AB8D8 /* Assets.xcassets in Resources */,
